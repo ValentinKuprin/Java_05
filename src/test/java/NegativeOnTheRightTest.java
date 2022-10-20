@@ -17,6 +17,7 @@ public class NegativeOnTheRightTest {
     public void testNegativeOnTheRight_ContainsZero() {
         int[] arr = {4, -3, 7, -12, 5, 0, -2, 9, 4, 12};
         int[] expectedResult = {4, 7, 5, 0, 9, 4, 12, -3, -12, -2};
+        new NegativeOnTheRight();
         int[] actualResult = new NegativeOnTheRight().negativeOnTheRight(arr);
         Assert.assertEquals(actualResult, expectedResult);
     }
