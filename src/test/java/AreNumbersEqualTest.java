@@ -36,6 +36,4 @@ public class AreNumbersEqualTest {
         int actualResult = new AreNumbersEqual().areNumbersEqual(num1, num2);
         Assert.assertEquals(actualResult, expectedResult);
     }
-
-
 }

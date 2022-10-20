@@ -7,4 +7,11 @@ public class Utils {
         }
         return l;
     }
+
+    public static int minValue(int k, int l) {
+        if (k < l) {
+            return k;
+        }
+        return l;
+    }
 }
