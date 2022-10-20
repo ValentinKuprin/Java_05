@@ -4,8 +4,10 @@ public class IsPositiveNumber {
 
     public Boolean isPositiveNumber(int num) {
         if (num >= 0) {
+
             return true;
         }
+
         return false;
     }
 }

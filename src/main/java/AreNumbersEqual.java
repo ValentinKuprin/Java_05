@@ -10,8 +10,10 @@ public class AreNumbersEqual {
         if (num1 == num2) {
             return 0;
         } else if (num1 < num2) {
+
             return -1;
         }
+
         return 1;
     }
 }

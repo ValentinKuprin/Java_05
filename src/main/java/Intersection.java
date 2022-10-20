@@ -26,7 +26,7 @@ public class Intersection {
                 }
 
             }
-//            System.out.println(Arrays.toString(common));
+
             return common;
         }
 

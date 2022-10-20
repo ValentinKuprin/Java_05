@@ -45,8 +45,10 @@ public class MinMaxAve {
             }
             double avg = sumSequence / longSequence;
             double[] minMaxAvg = new double[] {min, max, avg};
+
             return minMaxAvg;
         }
+
         return new double[0];
     }
 

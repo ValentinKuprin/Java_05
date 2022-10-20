@@ -18,8 +18,10 @@ public class OddIndices {
                     j++;
                 }
             }
+
             return arrOdd;
         }
+
         return new int[0];
     }
 }

@@ -9,8 +9,10 @@ public class ReverseArray {
                 newArray[step] += arr[i];
                 step++;
             }
+
             return newArray;
         }
+
         return new int[0];
     }
 }
