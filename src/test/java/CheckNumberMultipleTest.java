@@ -1,7 +1,7 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CheckNumberTest {
+public class CheckNumberMultipleTest {
     /** Given an integer M perform the following conditional actions:
      * If M is multiple of 7 and 9 then return "Good Number".
      * If M is only multiple of 9 and not of 7  then return "Bad Number"
@@ -14,34 +14,34 @@ public class CheckNumberTest {
      * Если M не удовлетворяет ни одному из вышеперечисленных условий, то верните "-1" */
 
     @Test
-    public void testCheckNumber_Multiple9And7() {
+    public void testCheckNumberMultiple_Multiple9And7() {
         int m = 63;
         String expectedResult = "Good Number";
-        String actualResult = new CheckNumber().checkNumber(m);
+        String actualResult = new CheckNumberMultiple().checkNumberMultiple(m);
         Assert.assertEquals(actualResult, expectedResult);
     }
 
     @Test
-    public void testCheckNumber_Multiple9Not7() {
+    public void testCheckNumberMultiple_Multiple9Not7() {
         int m = 18;
         String expectedResult = "Bad Number";
-        String actualResult = new CheckNumber().checkNumber(m);
+        String actualResult = new CheckNumberMultiple().checkNumberMultiple(m);
         Assert.assertEquals(actualResult, expectedResult);
     }
 
     @Test
-    public void testCheckNumber_Multiple11() {
+    public void testCheckNumberMultiple_Multiple11() {
         int m = 110;
         String expectedResult = "Poor Number";
-        String actualResult = new CheckNumber().checkNumber(m);
+        String actualResult = new CheckNumberMultiple().checkNumberMultiple(m);
         Assert.assertEquals(actualResult, expectedResult);
     }
 
     @Test
-    public void testCheckNumber_OtherNumbers() {
+    public void testCheckNumberMultiple_OtherNumbers() {
         int m = -7;
         String expectedResult = "-1";
-        String actualResult = new CheckNumber().checkNumber(m);
+        String actualResult = new CheckNumberMultiple().checkNumberMultiple(m);
         Assert.assertEquals(actualResult, expectedResult);
     }
 

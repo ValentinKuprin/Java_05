@@ -1,4 +1,4 @@
-public class CheckNumber {
+public class CheckNumberMultiple {
     /** Given an integer M perform the following conditional actions:
      * If M is multiple of 7 and 9 then return "Good Number".
      * If M is only multiple of 9 and not of 7  then return "Bad Number"
@@ -10,7 +10,7 @@ public class CheckNumber {
      * Если M кратно только 11, то верните "Плохое число".
      * Если M не удовлетворяет ни одному из вышеперечисленных условий, то верните "-1"*/
 
-    public String checkNumber(int m) {
+    public String checkNumberMultiple(int m) {
         if (m % 7 ==0 && m % 9 == 0) {
             return "Good Number";
         } else if (m % 9 == 0 && m % 7 != 0) {
