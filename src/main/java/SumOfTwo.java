@@ -23,15 +23,17 @@ public class SumOfTwo {
             for (int i = 0; i < arr.length; i++) {
                 for (int j = i + 1; j < arr.length; j++) {
                     if (arr[i] + arr[j] == n) {
-                        arraySumOfTwo[iterator] = new int[]{arr[i], arr[j]};
+//                        arraySumOfTwo[iterator] = new int[]{arr[i], arr[j]};
+//                        iterator++;
+                        arraySumOfTwo[iterator][0] = arr[i];
+                        arraySumOfTwo[iterator][1] = arr[j];
                         iterator++;
-
                     }
                 }
             }
-
+            System.out.println(Arrays.toString(arraySumOfTwo));
             return arraySumOfTwo;
-//            System.out.println(Arrays.toString(arraySumOfTwo)); //TODO: почему не работает????
+
         }
         return new int[0][0];
     }
