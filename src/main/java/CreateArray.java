@@ -27,7 +27,7 @@ public class CreateArray {
 //                } else {
 //                    newStr += newStr.charAt(i);
 //                }
-//            }
+//            }//TODO; отформатировать в массив
             System.out.println(newStr);
         }
         return new int[0];
