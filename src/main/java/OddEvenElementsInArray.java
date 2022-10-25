@@ -38,22 +38,22 @@ public class OddEvenElementsInArray {
                     countOdd++;
                 }
             }
-            int newArr[][] = new int[countEven][countOdd];
+            int[][] evenOddArray = new int[][]{new int[countEven],new int[countOdd]};
             int j = 0;
             int k = 0;
             for (int i = 0; i < arr.length; i++) {
                 if (arr[i] % 2 == 0) {
-                    newArr[j][countEven] = arr[i];
+                    evenOddArray[0][j] = arr[i];
                     j++;
                 } else {
-                    newArr[countOdd][k] = arr[i];
+                    evenOddArray[1][k] = arr[i];
                     k++;
                 }
             }
-//            System.out.println(Arrays.deepEquals(newArr));
+
+            return evenOddArray;
         }
+
         return new int[0][0];
-
     }
-
 }
