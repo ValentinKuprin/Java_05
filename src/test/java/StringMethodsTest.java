@@ -102,7 +102,54 @@ public class StringMethodsTest {
      “    R e d     Ro ve    r Sc   h ool   “ →  “RedRoverSchool“
      “p a     n   d a   “ → “panda” */
 
+    @Test
+    public void testRemoveAllSpaces_SpaceInBeginMiddleEnd() {
+        String str = "    R e d     Ro ve    r Sc   h ool   ";
+        String expectedResult = "RedRoverSchool";
+        String actualResult = new StringMethods().removeAllSpaces(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testRemoveAllSpaces_SpaceInMiddleEnd() {
+        String str = "p a     n   d a   ";
+        String expectedResult = "panda";
+        String actualResult = new StringMethods().removeAllSpaces(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
 
 
+    /**      Test Data:
+     “Abracadabra” → “5, 6”
+     “Homenum Revelio” → “0, 15”
+     “3 tarAmasAlatA” → “6, 8”  */
 
+    @Test
+    public void testCountAs_() {
+        String str = "Abracadabra";
+        String expectedResult = "5, 6";
+        String actualResult = new StringMethods().countAs(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testCountAs__() {
+        String str = "Homenum Revelio";
+        String expectedResult = "0, 15";
+        String actualResult = new StringMethods().countAs(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testCountAs____() {
+        String str = "3 tarAmasAlatA";
+        String expectedResult = "6, 8";
+        String actualResult = new StringMethods().countAs(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
 }
