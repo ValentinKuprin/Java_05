@@ -67,5 +67,42 @@ public class StringMethodsTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
+    /**      Test Data:
+     “3504209706040000 “ →  “35429764“
+     “0000000111“ → “111”   */
+
+    @Test
+    public void testRemoveAllZeros_TrimSpaceAndRemoveZeros(){
+       String str = "3504209706040000 ";
+       String expectedResult = "35429764";
+       String actualResult = new StringMethods().removeAllZeros(str);
+
+       Assert.assertEquals(actualResult, expectedResult);
+   }
+
+    @Test
+    public void testRemoveAllZeros_RemoveZeros(){
+        String str = "0000000111";
+        String expectedResult = "111";
+        String actualResult = new StringMethods().removeAllZeros(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testRemoveAllZeros_NotSpacesAndZeros(){
+        String str = "111";
+        String expectedResult = "This is a valid string";
+        String actualResult = new StringMethods().removeAllZeros(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    /**      Test Data:
+     “    R e d     Ro ve    r Sc   h ool   “ →  “RedRoverSchool“
+     “p a     n   d a   “ → “panda” */
+
+
+
 
 }
