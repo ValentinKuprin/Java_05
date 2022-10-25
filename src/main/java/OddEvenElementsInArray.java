@@ -50,8 +50,9 @@ public class OddEvenElementsInArray {
                     k++;
                 }
             }
-            System.out.println(Arrays.deepEquals(newArr));
+//            System.out.println(Arrays.deepEquals(newArr));
         }
+        return new int[0][0];
 
     }
 
