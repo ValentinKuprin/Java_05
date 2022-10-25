@@ -144,4 +144,16 @@ public class StringMethods {
         return false;
     }
 
+    /** Напишите метод insertQuotes(), который принимает слово и возвращает строку, в которой это слово “обернуто” в кавычки:
+     Test Data:
+     “Abracadabra” →  ““Abracadabra”” */
+
+    public String insertQuotes(String str) {
+        if (!str.isEmpty()) {
+
+            return "\"" + str + "\"";
+        }
+        return "";
+    }
+
 }

@@ -202,4 +202,15 @@ public class StringMethodsTest {
         Assert.assertEquals(actualResult, expected);
     }
 
+    /**      Test Data:
+     “Abracadabra” →  ““Abracadabra”” */
+    @Test
+    public void insertQuotes() {
+        String str = "Abracadabra";
+        String expectedResult = "\"Abracadabra\"";
+        String actualResult = new StringMethods().insertQuotes(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
 }
