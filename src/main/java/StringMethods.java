@@ -38,7 +38,11 @@ public class StringMethods {
      “panda   “ → “pnd”
      “taramasalata” → “trmslt” */
 
-    public removeAllAs(String str) {
+    public String removeAllAs(String str) {
+        if (!str.isEmpty()) {
 
+            return str = str.trim().replace("a", "");
+        }
+        return "";
     }
 }

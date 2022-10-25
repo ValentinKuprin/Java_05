@@ -8,7 +8,7 @@ public class StringMethodsTest {
      “” → “Строка пустая” */
 
     @Test
-    public void testStringMethods_SpaceInBeginAndEndOfString() {
+    public void testStringMethods_TrimSpaceInBeginAndEndOfString() {
         String str = "    Red Rover School   ";
         String expectedResult = "Лишние пробелы удалены";
         String actualResult = new StringMethods().removeSpaces(str);
@@ -39,6 +39,33 @@ public class StringMethodsTest {
      “    Red Rover School   “ →  “Red Rover School“
      “panda   “ → “pnd”
      “taramasalata” → “trmslt” */
+
+    @Test
+    public void testremoveAllAs_TrimSpacesInBeginAndEndOfString() {
+        String str = "    Red Rover School   ";
+        String expectedResult = "Red Rover School";
+        String actualResult = new StringMethods().removeAllAs(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testremoveAllAs_TrimSpaceAndRemoveALetters() {
+        String str = "panda   ";
+        String expectedResult = "pnd";
+        String actualResult = new StringMethods().removeAllAs(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testremoveAllAs_RemoveALetters() {
+        String str = "taramasalata";
+        String expectedResult = "trmslt";
+        String actualResult = new StringMethods().removeAllAs(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
 
 
 }
