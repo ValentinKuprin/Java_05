@@ -161,7 +161,7 @@ public class StringMethods {
     public String insertQuotes(String str) {
         if (!str.isEmpty()) {
 
-            return "\"" + str + "\"";
+            return "\"" + str.trim() + "\"";
         }
 
         return "";
@@ -187,7 +187,7 @@ public class StringMethods {
 
     public static String correctCityName(String str) {
         if (!str.isEmpty()) {
-            str = str.toLowerCase();
+            str = str.trim().toLowerCase();
 
             return str.substring(0, 1).toUpperCase().concat(str.substring(1));
         }
@@ -207,7 +207,7 @@ public class StringMethods {
 
     public String wordBetweenLetter(String str, char letter) {
         if (!str.isEmpty()) {
-            return str.substring(str.indexOf(letter), str.lastIndexOf(letter) + 1);
+            return str.trim().substring(str.indexOf(letter), str.lastIndexOf(letter) + 1);
         }
         return "";
     }
@@ -221,7 +221,7 @@ public class StringMethods {
 
     public boolean firstAndLastLetterTheSame(String str) {
         if (!str.isEmpty()) {
-            str = str.toLowerCase();
+            str = str.trim().toLowerCase();
             if (str.substring(0, 1).equals(str.substring(str.length() - 1))) {
 
                 return true;
@@ -234,7 +234,6 @@ public class StringMethods {
         return false;
     }
 
-
     /**
      * 12 Видео4: https://www.youtube.com/watch?v=AY5b6iIk8mM
      * Напишите метод, который принимает на вход строку из двух слов, разделенных пробелом, и возвращает последнее слово
@@ -244,6 +243,7 @@ public class StringMethods {
 
     public String returnLastWord(String str) {
         if (!str.isEmpty()) {
+            str = str.trim();
             String result = "";
             for (int i = str.length() - 1; i >= 0; i--) {
                 if (str.charAt(i) == ' ') {
@@ -264,10 +264,24 @@ public class StringMethods {
     public String removeBetweenTwoIndexes(String str, int index1, int index2) {
         if (!str.isEmpty()) {
 
-            return str.replace(str.substring(index1, index2 + 1), "");
+            return str.trim().replace(str.substring(index1, index2 + 1), "");
 
         }
         return "";
+    }
+
+    /** Видео5: https://youtu.be/SBByYcrsXu0?t=42
+     split()
+     Напишите метод, который принимает на вход предложение и возвращает слова из этого предложения в виде массива слов
+     Test Data:
+     “QA for Everyone” → {“QA”, “for”, “Everyone”}
+     “Александр Сергеевич Пушкин” → {“Александр”, “Сергеевич”, “Пушкин”} */
+
+    public String[] convertStringToArray(String str) {
+        if (!str.isEmpty()) {
+            return str.trim().split(" ");
+        }
+        return new String[0];
     }
 
     public static void main(String[] args) {

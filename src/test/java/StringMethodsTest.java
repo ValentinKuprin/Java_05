@@ -227,7 +227,6 @@ public class StringMethodsTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
-
     /**
      * Test Data:
      * “ташкент” → “Ташкент”
@@ -322,6 +321,28 @@ public class StringMethodsTest {
         int index2 = 4;
         String expectedResult = "Rover";
         String actualResult = new StringMethods().removeBetweenTwoIndexes(str, index1, index2);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    /** Test Data:
+     “QA for Everyone” → {“QA”, “for”, “Everyone”}
+     “Александр Сергеевич Пушкин” → {“Александр”, “Сергеевич”, “Пушкин”}  */
+
+    @Test
+    public void testConvertStringToArray() {
+        String str = "QA for Everyone";
+        String[] expectedResult = {"QA", "for", "Everyone"};
+        String[] actualResult = new StringMethods().convertStringToArray(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testConvertStringToArray_() {
+        String str = "Александр Сергеевич Пушкин";
+        String[] expectedResult = {"Александр", "Сергеевич", "Пушкин"};
+        String[] actualResult = new StringMethods().convertStringToArray(str);
 
         Assert.assertEquals(actualResult, expectedResult);
     }
