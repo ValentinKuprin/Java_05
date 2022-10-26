@@ -235,6 +235,35 @@ public class StringMethodsTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
+    /** Test Data:
+     “Abracadabra”, “b” → “bracadab”
+     “Whippersnapper”, “p” → “ppersnapp” */
+    @Test
+    public void testWordBetweenLetter() {
+        String str = "Abracadabra";
+        char letter = 'b';
+        String expectedResult = "bracadab";
+        String actualResult = new StringMethods().wordBetweenLetter(str, letter);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testWordBetweenLetter_() {
+        String str = "Whippersnapper";
+        char letter = 'p';
+        String expectedResult = "ppersnapp";
+        String actualResult = new StringMethods().wordBetweenLetter(str, letter);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    /** Test Data:
+     “Abracadabra” → true
+     “Whippersnapper” → false */
+
+    public void test
+
     /**      Test Data:
      “Red Rover” → “Rover” */
     @Test
