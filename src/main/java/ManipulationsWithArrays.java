@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ManipulationsWithArrays {
     /**
      * 4 В классе ManipulationsWithArrays написать метод getTheGreaterHalf(), который принимает массив целых чисел,
@@ -13,11 +15,13 @@ public class ManipulationsWithArrays {
                 int indexRightArr = 0;
                 int sumLeftArr = 0;
                 int sumRightArr = 0;
-                for (int i = 0, j = arr.length - 1; i < j / 2; i++, j--) {
+                for (int i = 0, j = arr.length - 1; i < j; i++, j--) {
                     arrLeft[indexLeftArr] += arr[i];
                     sumLeftArr += arr[i];
+                    indexLeftArr++;
                     arrRight[indexRightArr] += arr[j];
                     sumRightArr += arr[j];
+                    indexRightArr++;
 
                 }
                 if (sumLeftArr > sumRightArr) {
@@ -28,9 +32,37 @@ public class ManipulationsWithArrays {
                     return arrRight;
                 }
             } else {
-                //TODO: Дописать с с нечетной последовательность.
+                if (arr.length % 2 != 0) {
+                    int[] arrLeft = new int[(int) Math.floor(arr.length / 2)];
+                    int[] arrRight = new int[(int) Math.floor(arr.length / 2)];
+                    int indexLeftArr = 0;
+                    int indexRightArr = 0;
+                    int sumLeftArr = 0;
+                    int sumRightArr = 0;
+                    for (int i = 0, j = arr.length - 1; i < j; i++, j--) {
+                        arrLeft[indexLeftArr] += arr[i];
+                        sumLeftArr += arr[i];
+                        indexLeftArr++;
+                        arrRight[indexRightArr] += arr[j];
+                        sumRightArr += arr[j];
+                        indexRightArr++;
+                    }
+                    if (sumLeftArr > sumRightArr) {
+
+                        return arrLeft;
+                    } else {
+
+                        return arrRight;
+                    }
+                }
             }
         }
+
+        return new int[0];
+    }
+
+    public static void main(String[] args) {
+//        System.out.println(Arrays.toString(getTheGreaterHalf(new int[]{1, 2, 3, 1, 2, 3})));
     }
 
 }
