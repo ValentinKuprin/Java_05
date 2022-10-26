@@ -205,12 +205,59 @@ public class StringMethodsTest {
     /**      Test Data:
      “Abracadabra” →  ““Abracadabra”” */
     @Test
-    public void insertQuotes() {
+    public void testInsertQuotes() {
         String str = "Abracadabra";
         String expectedResult = "\"Abracadabra\"";
         String actualResult = new StringMethods().insertQuotes(str);
 
         Assert.assertEquals(actualResult, expectedResult);
     }
+
+
+    /** Test Data:
+     “ташкент” → “Ташкент”
+     “ЧикаГО” → “Чикаго” */
+    @Test
+    public void testCorrectCityName_BeginLetterLowCase() {
+        String str = "ташкент";
+        String expectedResult = "Ташкент";
+        String actualResult = new StringMethods().correctCityName(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testCorrectCityName_FirstLetterAndLastLettersUpperCase() {
+        String str = "ЧикаГО";
+        String expectedResult = "Чикаго";
+        String actualResult = new StringMethods().correctCityName(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    /**      Test Data:
+     “Red Rover” → “Rover” */
+    @Test
+    public void testReturnLastWord() {
+        String str = "Red Rover";
+        String expectedResult = "Rover";
+        String actualResult = new StringMethods().returnLastWord(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    /** “Red rover”, 1, 4 → “Rover” */
+    @Test
+    public void testRemoveBetweenTwoIndexes() {
+        String str = "Red rover";
+        int index1 = 1;
+        int index2 = 4;
+        String expectedResult = "Rover";
+        String actualResult = new StringMethods().removeBetweenTwoIndexes(str, index1, index2);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+
 
 }

@@ -1,5 +1,5 @@
 public class StringMethods {
-    /**
+    /** 1
      * Видео1: https://youtu.be/78ZAzmNbUYQ?t=173
      * Методы isEmpty(), length(), trim(), replace()
      * <p>
@@ -32,7 +32,7 @@ public class StringMethods {
         return "Строка пустая";
     }
 
-    /**
+    /** 2
      * Написать алгоритм removeAllAs().
      * С помощью методов из видео1,  написать алгоритм, который принимает на вход строку. Если строка валидная,
      * то метод удаляет все буквы a из строки, если таковые имеются. Метод возвращает обработанную строку.
@@ -50,7 +50,7 @@ public class StringMethods {
         return "";
     }
 
-    /**
+    /** 3
      * Написать алгоритм removeAllZeros().
      * С помощью методов из видео1,  написать алгоритм, который принимает на вход строку, состоящую из цифр.
      * Если строка валидная, то метод удаляет все пробелы из строки, если таковые имеются. Метод возвращает обработанную
@@ -74,7 +74,7 @@ public class StringMethods {
         return "";
     }
 
-    /**
+    /** 4
      * Написать алгоритм removeAllSpaces.
      * С помощью методов из видео1,  написать алгоритм, который принимает на вход строку. Если строка валидная, то метод
      * удаляет все пробелы из строки, если таковые имеются. Метод возвращает обработанную строку.
@@ -90,7 +90,7 @@ public class StringMethods {
         return "";
     }
 
-    /** Видео2: https://www.youtube.com/watch?v=thzfsPEYXfI
+    /**5 Видео2: https://www.youtube.com/watch?v=thzfsPEYXfI
      Методы
      charAt(), concat(), contains(), substring(), toLowerCase(),  toUpperCase()
      Напишите метод countAs(), который принимает на вход строку и считает, сколько букв а или А содержится в строке.
@@ -119,7 +119,7 @@ public class StringMethods {
         return "";
     }
 
-    /** Напишите метод countJava(), который принимает на вход текст и проверяет, содержится ли в тексте хотя бы одно слово Java.
+    /**6 Напишите метод countJava(), который принимает на вход текст и проверяет, содержится ли в тексте хотя бы одно слово Java.
      Test Data:
      “As of March 2022, Java 18 is the latest version, while Java 17, 11 and 8 are the current long-term support (LTS) versions.
      Oracle released the last zero-cost public update for the legacy version Java 8 LTS in January 2019 for commercial use,
@@ -144,7 +144,7 @@ public class StringMethods {
         return false;
     }
 
-    /** Напишите метод insertQuotes(), который принимает слово и возвращает строку, в которой это слово “обернуто” в кавычки:
+    /**7 Напишите метод insertQuotes(), который принимает слово и возвращает строку, в которой это слово “обернуто” в кавычки:
      Test Data:
      “Abracadabra” →  ““Abracadabra”” */
 
@@ -153,7 +153,77 @@ public class StringMethods {
 
             return "\"" + str + "\"";
         }
+
         return "";
+    }
+
+    /** 8 Напишите метод insertQuotes(), который принимает на вход две строки, и добавляет знак :  после слова “писал”,  и оборачивает в кавычки вторую строку
+     (результат строится с помощью метода concat())
+
+     Test Data:
+     “Федор Достоевский писал”, “Надо любить жизнь больше, чем смысл жизни.” →
+     “Федор Достоевский писал: "Надо любить жизнь больше, чем смысл жизни."”
+     Задание со звездочкой:
+     “Наполеон Бонапарт писал”, “В моем словаре нет слова «невозможно».” →
+     "Наполеон Бонапарт писал: "В моем словаре нет слова "невозможно"."" */ //TODO:
+
+
+
+    /** 9 Напишите метод, кторый принимает на вход название города и исправляет написание:
+     Test Data:
+     “ташкент” → “Ташкент”
+     “ЧикаГО” → “Чикаго” */
+
+    public static String correctCityName(String str) {
+        if (!str.isEmpty()) {
+            str = str.toLowerCase();
+
+            return str.substring(0, 1).toUpperCase().concat(str.substring(1));
+        }
+
+        return "";
+    }
+
+
+
+
+
+
+
+
+
+    /** 12 Видео4: https://www.youtube.com/watch?v=AY5b6iIk8mM
+     Напишите метод, который принимает на вход строку из двух слов, разделенных пробелом, и возвращает последнее слово
+     Test Data:
+     “Red Rover” → “Rover” */
+
+    public String returnLastWord(String str) {
+        if (!str.isEmpty()) {
+            String result = "";
+            for (int i = str.length() - 1; i >= 0 ; i--) {
+                if (str.charAt(i) == ' ') {
+                    result = str.substring(i + 1);
+                }
+            }
+            return result;
+        }
+        return "";
+    }
+
+    /** 13 Написать метод, который принимает строку, и 2 индекса. Метод удаляет все, что находится между двумя индексами включительно
+     Test Data:
+     “Red rover”, 1, 4 → “Rover” */
+
+    public String removeBetweenTwoIndexes(String str, int index1, int index2) {
+        if (!str.isEmpty()) {
+
+            return str.replace(str.substring(index1, index2 + 1), "");
+        }
+        return "";
+    }
+
+    public static void main(String[] args) {
+        System.out.println(correctCityName("ташкент"));
     }
 
 }
