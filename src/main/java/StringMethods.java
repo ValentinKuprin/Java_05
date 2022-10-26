@@ -219,7 +219,7 @@ public class StringMethods {
      * “Whippersnapper” → false
      */
 
-    public static boolean firstAndLastLetterTheSame(String str) {
+    public boolean firstAndLastLetterTheSame(String str) {
         if (!str.isEmpty()) {
             str = str.toLowerCase();
             if (str.substring(0, 1).equals(str.substring(str.length() - 1))) {
@@ -271,7 +271,6 @@ public class StringMethods {
     }
 
     public static void main(String[] args) {
-        System.out.println(firstAndLastLetterTheSame("Abracadabra"));
 
     }
 

@@ -2,10 +2,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class StringMethodsTest {
-    /**      Test Data:
-     “    Red Rover School   “ → “Лишние пробелы удалены”
-     “Red Rover School“ → “Пробелов не было”
-     “” → “Строка пустая” */
+    /**
+     * Test Data:
+     * “    Red Rover School   “ → “Лишние пробелы удалены”
+     * “Red Rover School“ → “Пробелов не было”
+     * “” → “Строка пустая”
+     */
 
     @Test
     public void testStringMethods_TrimSpaceInBeginAndEndOfString() {
@@ -35,10 +37,12 @@ public class StringMethodsTest {
     }
 
 
-    /**      Test Data:
-     “    Red Rover School   “ →  “Red Rover School“
-     “panda   “ → “pnd”
-     “taramasalata” → “trmslt” */
+    /**
+     * Test Data:
+     * “    Red Rover School   “ →  “Red Rover School“
+     * “panda   “ → “pnd”
+     * “taramasalata” → “trmslt”
+     */
 
     @Test
     public void testremoveAllAs_TrimSpacesInBeginAndEndOfString() {
@@ -67,21 +71,23 @@ public class StringMethodsTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
-    /**      Test Data:
-     “3504209706040000 “ →  “35429764“
-     “0000000111“ → “111”   */
+    /**
+     * Test Data:
+     * “3504209706040000 “ →  “35429764“
+     * “0000000111“ → “111”
+     */
 
     @Test
-    public void testRemoveAllZeros_TrimSpaceAndRemoveZeros(){
-       String str = "3504209706040000 ";
-       String expectedResult = "35429764";
-       String actualResult = new StringMethods().removeAllZeros(str);
+    public void testRemoveAllZeros_TrimSpaceAndRemoveZeros() {
+        String str = "3504209706040000 ";
+        String expectedResult = "35429764";
+        String actualResult = new StringMethods().removeAllZeros(str);
 
-       Assert.assertEquals(actualResult, expectedResult);
-   }
+        Assert.assertEquals(actualResult, expectedResult);
+    }
 
     @Test
-    public void testRemoveAllZeros_RemoveZeros(){
+    public void testRemoveAllZeros_RemoveZeros() {
         String str = "0000000111";
         String expectedResult = "111";
         String actualResult = new StringMethods().removeAllZeros(str);
@@ -90,7 +96,7 @@ public class StringMethodsTest {
     }
 
     @Test
-    public void testRemoveAllZeros_NotSpacesAndZeros(){
+    public void testRemoveAllZeros_NotSpacesAndZeros() {
         String str = "111";
         String expectedResult = "This is a valid string";
         String actualResult = new StringMethods().removeAllZeros(str);
@@ -98,9 +104,11 @@ public class StringMethodsTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
-    /**      Test Data:
-     “    R e d     Ro ve    r Sc   h ool   “ →  “RedRoverSchool“
-     “p a     n   d a   “ → “panda” */
+    /**
+     * Test Data:
+     * “    R e d     Ro ve    r Sc   h ool   “ →  “RedRoverSchool“
+     * “p a     n   d a   “ → “panda”
+     */
 
     @Test
     public void testRemoveAllSpaces_SpaceInBeginMiddleEnd() {
@@ -121,10 +129,12 @@ public class StringMethodsTest {
     }
 
 
-    /**      Test Data:
-     “Abracadabra” → “5, 6”
-     “Homenum Revelio” → “0, 15”
-     “3 tarAmasAlatA” → “6, 8”  */
+    /**
+     * Test Data:
+     * “Abracadabra” → “5, 6”
+     * “Homenum Revelio” → “0, 15”
+     * “3 tarAmasAlatA” → “6, 8”
+     */
 
     @Test
     public void testCountAs_() {
@@ -153,16 +163,18 @@ public class StringMethodsTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
-    /**      Test Data:
-     “As of March 2022, Java 18 is the latest version, while Java 17, 11 and 8 are the current long-term support (LTS) versions.
-     Oracle released the last zero-cost public update for the legacy version Java 8 LTS in January 2019 for commercial use,
-     although it will otherwise still support Java 8 with public updates for personal use indefinitely. Other vendors have begun
-     to offer zero-cost builds of OpenJDK 8 and 11 that are still receiving security and other upgrades.” → true
-
-     “99 little bugs in a code.
-     99 little bugs in a code.
-     Take one down, and patch it around.
-     235 critical bugs in the code.” → false */
+    /**
+     * Test Data:
+     * “As of March 2022, Java 18 is the latest version, while Java 17, 11 and 8 are the current long-term support (LTS) versions.
+     * Oracle released the last zero-cost public update for the legacy version Java 8 LTS in January 2019 for commercial use,
+     * although it will otherwise still support Java 8 with public updates for personal use indefinitely. Other vendors have begun
+     * to offer zero-cost builds of OpenJDK 8 and 11 that are still receiving security and other upgrades.” → true
+     * <p>
+     * “99 little bugs in a code.
+     * 99 little bugs in a code.
+     * Take one down, and patch it around.
+     * 235 critical bugs in the code.” → false
+     */
 
     @Test
     public void testCountJava_Contains_Java() {
@@ -202,8 +214,10 @@ public class StringMethodsTest {
         Assert.assertEquals(actualResult, expected);
     }
 
-    /**      Test Data:
-     “Abracadabra” →  ““Abracadabra”” */
+    /**
+     * Test Data:
+     * “Abracadabra” →  ““Abracadabra””
+     */
     @Test
     public void testInsertQuotes() {
         String str = "Abracadabra";
@@ -214,9 +228,11 @@ public class StringMethodsTest {
     }
 
 
-    /** Test Data:
-     “ташкент” → “Ташкент”
-     “ЧикаГО” → “Чикаго” */
+    /**
+     * Test Data:
+     * “ташкент” → “Ташкент”
+     * “ЧикаГО” → “Чикаго”
+     */
     @Test
     public void testCorrectCityName_BeginLetterLowCase() {
         String str = "ташкент";
@@ -235,9 +251,11 @@ public class StringMethodsTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
-    /** Test Data:
-     “Abracadabra”, “b” → “bracadab”
-     “Whippersnapper”, “p” → “ppersnapp” */
+    /**
+     * Test Data:
+     * “Abracadabra”, “b” → “bracadab”
+     * “Whippersnapper”, “p” → “ppersnapp”
+     */
     @Test
     public void testWordBetweenLetter() {
         String str = "Abracadabra";
@@ -258,14 +276,33 @@ public class StringMethodsTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
-    /** Test Data:
-     “Abracadabra” → true
-     “Whippersnapper” → false */
+    /**
+     * Test Data:
+     * “Abracadabra” → true
+     * “Whippersnapper” → false
+     */
+    @Test
+    public void testFirstAndLastLetterTheSame_FirstLetterUpperCase() {
+        String str = "Abracadabra";
+        boolean expectedResult = true;
+        boolean actualResult = new StringMethods().firstAndLastLetterTheSame(str);
 
-    public void test
+        Assert.assertEquals(actualResult, expectedResult);
+    }
 
-    /**      Test Data:
-     “Red Rover” → “Rover” */
+    @Test
+    public void testFirstAndLastLetterTheSame_NegativeFirstAndLastLetterDifferent() {
+        String str = "Whippersnapper";
+        boolean expectedResult = false;
+        boolean actualResult = new StringMethods().firstAndLastLetterTheSame(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    /**
+     * Test Data:
+     * “Red Rover” → “Rover”
+     */
     @Test
     public void testReturnLastWord() {
         String str = "Red Rover";
@@ -275,7 +312,9 @@ public class StringMethodsTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
-    /** “Red rover”, 1, 4 → “Rover” */
+    /**
+     * “Red rover”, 1, 4 → “Rover”
+     */
     @Test
     public void testRemoveBetweenTwoIndexes() {
         String str = "Red rover";
@@ -286,7 +325,6 @@ public class StringMethodsTest {
 
         Assert.assertEquals(actualResult, expectedResult);
     }
-
 
 
 }
