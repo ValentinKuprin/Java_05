@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class OddEvenElementsInArray {
-    /**
+    /** 2
      * В классе OddEvenElementsInArray написать метод countOddEvenValuesInArray(), который принимает на вход массив
      * целых чисел и возвращает массив int[2], который содержит количество четных и нечетных элементов входящего массива
      */
@@ -25,7 +25,7 @@ public class OddEvenElementsInArray {
         return new int[0];
     }
 
-    /** В классе OddEvenElementsInArray написать метод createOddEvenArray(), который принимает массив целых
+    /** 3 В классе OddEvenElementsInArray написать метод createOddEvenArray(), который принимает массив целых
      * случайных чисел, и возвращает двумерный массив (массив четных и массив нечетных чисел) */
     public int[][] createOddEvenArray(int[] arr) {
         if (arr.length > 0) {
