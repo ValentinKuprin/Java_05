@@ -36,4 +36,15 @@ public class CreateArray {
     public static void main(String[] args) {
         createArray("3 4 1 8 10 12.3 hj pooo -78 uihiu8979klnjk 2.3  2,4 -2,3");
     }
+
+    public int[] multiplesOf(int number) {
+        if (number > 0 && number < 11) {
+            int[] mutiplesArr = new int[11];
+            for (int i = 0; i < mutiplesArr.length; i++) {
+                mutiplesArr[i] += number * i;
+            }
+            return mutiplesArr;
+        }
+        return new int[0];
+    }
 }

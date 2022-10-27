@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class OddEvenElementsInArray {
     /** 2
      * В классе OddEvenElementsInArray написать метод countOddEvenValuesInArray(), который принимает на вход массив
