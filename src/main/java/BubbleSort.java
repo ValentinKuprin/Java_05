@@ -23,4 +23,8 @@ public class BubbleSort {
 
         return new int[0];
     }
+
+    public int[] sortOfMinValue(int[] array){
+
+    }
 }
